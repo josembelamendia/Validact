@@ -2,9 +2,10 @@
 
 _A simple JS validation tool with custom messages_
 
-## Get started
+## Get started 🔗
 
-_Add "app.js" to your project file_
+Add script "app.js" to your project file
+
 ### How to use 📋
 
 The first step is to set the field ```ID``` for our form.
@@ -15,10 +16,32 @@ Once the class is set, you will have to add ```data-identifier``` field with an 
 If you want to have a validation error message, you will have to add an element with the class ```validation-message```
 and link the message with the input adding the same ```data-identifier``` field that the input has.
 
+### Specifying rules for inputs 🔮
+
+In the ```config.json``` file you will find an example for the rules.
+Available rules: ```min```, ```max```, ```uppercase```. 
+Min/Max characters that a word need to have, and uppercase true/false if the word
+need at leaste 1 uppercase letter.
+
 For example:
 
 ```
 <label for=""> Name: </label>
 <input id="name" type="text" data-identifier="name" class="form-control validable">
 <span class="validation-message" data-identifier="name"></span>
+```
+
+In config.json:
+
+```
+{ 
+    "name": {
+        //Minimum of characters
+        "min": 1,
+        //Maximum
+        "max": 16,
+        //At least one uppercase?
+        "uppercase": true
+    },
+}
 ```

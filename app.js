@@ -4,8 +4,8 @@ var VALIDATION_RULES = [];
 var CUSTOM_INPUTS = [];
 const FORM = document.getElementById('validable-form');
 const FORM_INPUTS = Array.from(document.getElementsByClassName('validable'));
-const ERROR_BORDER = "1px solid red"
-const SUCCESS_BORDER = "1px solid green"
+const ERROR_BORDER = "1px solid #F74141"
+const SUCCESS_BORDER = "1px solid #11D323"
 const NO_BORDER = "none"
 const RULES = ["min", "max", "uppercase"];
 
@@ -96,7 +96,7 @@ class CustomInput {
         } else {
             if(this.getValidationMessageField() != null) {
                 this.getValidationMessageField().style.display = "block";
-                this.getValidationMessageField().style.color = "red";
+                this.getValidationMessageField().style.color = "#F74141";
                 this.getValidationMessageField().innerText = this.getErrorMessage()
             }
         }
