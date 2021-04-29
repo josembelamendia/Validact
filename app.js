@@ -9,13 +9,15 @@ const SUCCESS_BORDER = "1px solid #11D323"
 const NO_BORDER = "none"
 const RULES = ["min", "max", "uppercase"];
 
-$.ajax({
-    url: 'config.json',
-    success: function(data) {
-        VALIDATION_RULES = data;
+fetch('config.json').then(response => {
+    return response.json()
+}).then(data => {
+    VALIDATION_RULES = data;
 
-        init();
-    }
+    init();
+})
+.catch(error => {
+    console.log(error)
 })
 
 class CustomInput {
