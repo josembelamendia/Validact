@@ -4,7 +4,7 @@ _A simple JS validation tool with custom messages_
 
 ## Get started 🔗
 
-Add script "app.js" to your project file
+Add script "app.js" into your project file
 
 ### How to use 📋
 
